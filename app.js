@@ -14,7 +14,7 @@
             
             $('#form').attr('action', searchURI);
             
-            if ($el.hasData('get')) {
+            if ($el.data('get')) {
                 var searchGet = $el.data('get').split('&');
                 
                 $.each(searchGet, function(i, d) {
