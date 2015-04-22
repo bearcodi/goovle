@@ -30,7 +30,7 @@
             }
         });
         
-        $('#from').on('submit', function(e){
+        $('#form').on('submit', function(e){
             e.preventDefault();
             var $el = $(this);
             var $query = $el.serialize();
