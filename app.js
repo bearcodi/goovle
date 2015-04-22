@@ -13,7 +13,17 @@
             $('#search').attr('name', searchKey);
             
             $('#form').attr('action', searchURI);
+            
+            if ($el.hasData('get')) {
+                var searchGet = $el.data('get').split('&');
+                
+                $.each(searchGet, function(i, d) {
+                    console.log(i, d);
+                });
+                
+            }
         });
+    });
         
-  });
+ });
 }(jQuery));
