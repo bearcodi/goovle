@@ -1,6 +1,6 @@
 (function($){
     $(function () {
-        $('#lucky');.on('click', function (e) {
+        $('#lucky').on('click', function (e) {
             $('#search').val('punk');
         });
   });
