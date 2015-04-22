@@ -21,11 +21,11 @@
 .v {
     color: #15c;
 }
-.o1,
-.e {
+.o,
+.b {
     color: red;
 }
-.o2 {
+.a, .e {
     color: orange;
 }
 .l {
