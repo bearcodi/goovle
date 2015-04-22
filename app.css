@@ -1,0 +1,24 @@
+.jumbotron {
+    background-color: white;
+}
+.jumbotron h1 {
+    font-family: serif;
+    text-align: center;
+}
+.jumbotron h1 span {
+    margin: auto 0.05em;
+}
+.g,
+.v {
+    color: #15c;
+}
+.o1,
+.e {
+    color: red;
+}
+.o2 {
+    color: orange;
+}
+.l {
+    color: green;
+}
