@@ -16,9 +16,13 @@
             
             if ($el.data('get')) {
                 var searchGet = $el.data('get').split('&');
-                
+                var $elGet = $('#get-extra').empty();
                 $.each(searchGet, function(i, d) {
-                    console.log(i, d);
+                    var parts = d.split('=');
+                    $('<input type="hidden" />')
+                        .attr('name', parts[0])
+                        .attr('value', parts[1])
+                        .appendTo($elGet);
                 });
                 
             }
