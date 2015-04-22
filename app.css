@@ -8,6 +8,15 @@
 .jumbotron h1 span {
     margin: auto 0.05em;
 }
+.jumbotron .intro
+  {
+    font-size:1em;
+    text-transform: lowercase;
+    color: #999;
+    text-align:center;
+    padding:1em auto;
+  }
+
 .g,
 .v {
     color: #15c;
