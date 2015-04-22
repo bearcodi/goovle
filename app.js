@@ -29,5 +29,16 @@
                 });
             }
         });
+        
+        $('#from').on('submit', function(e){
+            e.preventDefault();
+            var $el = $(this);
+            var $query = $el.serialize();
+            var $uri = $el.attr('action');
+            
+            $('#results-frame').attr("src", $uri + '?' + $query);
+            
+            $('#results').show();
+        });
     });
 }(jQuery));
