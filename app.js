@@ -3,7 +3,7 @@
         $('#lucky').on('click', function (e) {
             var agencies = $('#agency a');
             var random = Math.floor((Math.random() * 2));
-            agencies[random].trigger('click');
+            $(agencies[random]).trigger('click');
         });
         
         $('#agency').on('click', 'a', function(e){
