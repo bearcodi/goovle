@@ -6,7 +6,14 @@
         
         $('#agency').on('click', 'a', function(e){
             e.preventDefault();
-            console.log(this);
+            var $el = $(this);
+            var searchKey = $el.data('search');
+            var searchURI = $el.data('uri');
+            
+            $('#search').attr('name', searchKey);
+            
+            $('#form').attr('action', searchURI);
         });
+        
   });
 }(jQuery));
