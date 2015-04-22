@@ -24,7 +24,6 @@
                         .attr('value', parts[1])
                         .appendTo($elGet);
                 });
-                
             }
         });
     });
