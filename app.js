@@ -39,7 +39,7 @@
        $(window).on('resize', function (){
            var docHeight = $(document).height();
            var modalHeight = $('div.modal-dialog').outerHeight(true);
-           var frameHeight = $('#results-frame').attr('height').toInt();
+           var frameHeight = parseInt($('#results-frame').attr('height'));
            $('#results-frame').attr('height', docHeight - (modalHeight - frameHeight)  + 15 + 'px');
        });
        
