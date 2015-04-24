@@ -36,6 +36,13 @@
             }
         });
        
+       $(window).on('resize', function (){
+           var docHeight = $(document).height();
+           var modalHeight = $('div.modal-dialog').outerHeight(true);
+           
+           $('#results-frame').attr('height', docHeight - modalHeight + 15 + 'px');
+       });
+       
         $('#form').on('submit', function(e){
             e.preventDefault();
             var $el = $(this);
@@ -43,7 +50,7 @@
             var $uri = $el.attr('action');
             
             $('#results-frame').attr("src", $uri + '?' + $query);
-            
+            $(window).trigger('resize');
             $('#results').modal('show');
         });
     });
