@@ -40,7 +40,7 @@
            var docHeight = $(document).height();
            var modalHeight = $('div.modal-dialog').outerHeight(true);
            var frameHeight = parseInt($('#results-frame').attr('height'));
-           $('#results-frame').attr('height', docHeight - (modalHeight - frameHeight)  + 15 + 'px');
+           $('#results-frame').attr('height', docHeight - (modalHeight - frameHeight)  + 'px');
        });
        
         $('#form').on('submit', function(e){
