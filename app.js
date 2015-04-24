@@ -38,10 +38,9 @@
        
        $(window).on('resize', function (){
            var docHeight = $(document).height();
-           $('#results-frame').attr('height', 0);
            var modalHeight = $('div.modal-dialog').outerHeight(true);
-           console.log(docHeight, modalHeight);
-           $('#results-frame').attr('height', docHeight - modalHeight + 15 + 'px');
+           var frameHeight = $('#results-frame').attr('height').toInt();
+           $('#results-frame').attr('height', docHeight - (modalHeight - frameHeight)  + 15 + 'px');
        });
        
         $('#form').on('submit', function(e){
@@ -51,8 +50,12 @@
             var $uri = $el.attr('action');
             
             $('#results-frame').attr("src", $uri + '?' + $query);
-            $(window).trigger('resize');
+            
             $('#results').modal('show');
+        });
+        
+        $('#results').on('shown.bs.modal', function(){
+            $(window).trigger('resize');
         });
     });
 }(jQuery));
