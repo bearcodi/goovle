@@ -36,7 +36,7 @@
             }
         });
        
-        /*$('#form').on('submit', function(e){
+        $('#form').on('submit', function(e){
             e.preventDefault();
             var $el = $(this);
             var $query = $el.serialize();
@@ -44,7 +44,7 @@
             
             $('#results-frame').attr("src", $uri + '?' + $query);
             
-            $('#results').show();
-        });*/
+            $('#results').modal('show');
+        });
     });
 }(jQuery));
