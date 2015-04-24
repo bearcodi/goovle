@@ -8,8 +8,6 @@
             var agencies = $('#agency a.agency');
             var random = Math.floor((Math.random() * 2));
             $(agencies[random]).trigger('click');
-            
-            $('#agency').one('click', resetDefaultSearch);
             $('#govable-search').one('click', resetDefaultSearch);
             
         });
